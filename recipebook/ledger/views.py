@@ -9,7 +9,7 @@ def recipes_list(request):
         
            "recipes": [
               {
-                    "name": "Recipe 1",
+                   "name": "Recipe 1",
                     "ingredients": [
                         {
                             "name": "tomato",
@@ -71,4 +71,34 @@ def recipes_list(request):
             ]
     }
     return render(request, "recipes_list.html", ctx)
+
+def recipe_1(request):
+    ctx = {
+            "name": "Recipe 1",
+            "ingredients": [
+            {
+                "name": "tomato",
+                "quantity": "3pcs"
+            },
+            {
+                "name": "onion",
+                "quantity": "1pc"
+            },
+            {
+                "name": "pork",
+                "quantity": "1kg"
+            },
+            {
+                "name": "water",
+                "quantity": "1L"
+            },
+            {
+                "name": "sinigang mix",
+                "quantity": "1 packet"
+            }
+        ],
+        "link": "/recipe/1"
+    }
+    return render(request, 'recipe_1.html', ctx)
+
 # Create your views here.
