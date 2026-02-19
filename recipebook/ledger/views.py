@@ -13,4 +13,3 @@ class RecipeDetailView(DetailView):
     model = Recipe
     template_name = "recipe_detail.html" 
 
-# Create your views here.
