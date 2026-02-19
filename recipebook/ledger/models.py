@@ -5,7 +5,7 @@ class Ingredient(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.name
+        return f"{ self.name }"
     
     def get_absolute_url(self):
         return reverse('ledger:ingredient_detail', args=[str(self.id)])
