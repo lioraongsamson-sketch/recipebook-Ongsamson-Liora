@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import recipes_list, recipe_1, recipe_2, RecipeDetailView, RecipeListView
+from .views import RecipeDetailView, RecipeListView
 
 app_name = 'ledger'
 
