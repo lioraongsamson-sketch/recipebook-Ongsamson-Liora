@@ -5,7 +5,11 @@
 {% for recipe in recipes %}
 <h3>{{ recipe.name }}</h3>
 
-<p><a href="{{ recipe.link }}">{{ recipe.name }}</a></p>
+<li>
+    <p>
+        <a href="{{ recipe.get_absolute_url }}">{{ recipe.name }}</a>
+    </p>
+</li>
 
 {% endfor %}
 {% endblock %}
