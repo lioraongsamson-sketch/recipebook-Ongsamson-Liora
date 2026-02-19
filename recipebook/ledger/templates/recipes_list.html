@@ -2,14 +2,9 @@
 
 {% block content %}
 
-{% for recipe in recipes %}
-<h3>{{ recipe.name }}</h3>
+{% for recipe in recipe_list %}
 
-<li>
-    <p>
-        <a href="{{ recipe.get_absolute_url }}">{{ recipe.name }}</a>
-    </p>
-</li>
+<li><a href="{{ recipe.get_absolute_url }}">{{ recipe }}</a></li>
 
 {% endfor %}
 {% endblock %}
