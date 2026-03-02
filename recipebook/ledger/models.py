@@ -24,7 +24,7 @@ class Recipe(models.Model):
         related_name = 'recipes'
     )
     created_on = models.DateTimeField(auto_now_add=True)
-    update_on = models.DateTimeField(auto_now=True)
+    updated_on = models.DateTimeField(auto_now=True)
 
 
     def __str__(self):
