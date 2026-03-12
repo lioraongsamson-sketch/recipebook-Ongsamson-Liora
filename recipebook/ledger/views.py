@@ -3,8 +3,10 @@ from django.http import HttpResponse
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import CreateView
 
 from .models import Recipe
+from .forms import RecipeForm
 
 
 class RecipeListView(ListView):
@@ -15,3 +17,7 @@ class RecipeListView(ListView):
 class RecipeDetailView(LoginRequiredMixin, DetailView):
     model = Recipe
     template_name = "recipe_detail.html"
+
+class RecipeCreateView(LoginRequiredMixin, CreateView):
+    model = Recipe
+    form_class = RecipeForm
