@@ -20,10 +20,12 @@ class RecipeDetailView(LoginRequiredMixin, DetailView):
     model = Recipe
     template_name = "recipe_detail.html"
 
+
 class RecipeCreateView(LoginRequiredMixin, CreateView):
     model = Recipe
     form_class = RecipeForm
     template_name = "recipe_form.html"
+
 
 class RecipeUploadImageView(LoginRequiredMixin, CreateView):
     model = Recipe
@@ -37,7 +39,7 @@ class RecipeUploadImageView(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         return reverse_lazy('ledger:recipe_detail', kwargs={'pk': self.kwargs['pk']})
-    
+
     def post(self, request, *args, **kwargs):
         form = RecipeImageUploadForm(request.POST, request.FILES)
         if form.is_valid():

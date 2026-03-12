@@ -59,6 +59,7 @@ class RecipeIngredient(models.Model):
         related_name='ingredients'
     )
 
+
 class RecipeImage(models.Model):
     image = models.ImageField(upload_to="images/", null=True, blank=False)
     description = models.CharField(max_length=255)

@@ -8,8 +8,10 @@ from .models import Recipe, RecipeIngredient, Profile, RecipeImage
 class RecipeIngredientInLine(admin.TabularInline):
     model = RecipeIngredient
 
+
 class RecipeImageInLine(admin.TabularInline):
     model = RecipeImage
+
 
 class RecipeAdmin(admin.ModelAdmin):
     model = Recipe
@@ -23,6 +25,7 @@ class ProfileInLine(admin.StackedInline):
 
 class UserAdmin(BaseUserAdmin):
     inlines = [ProfileInLine]
+
 
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
