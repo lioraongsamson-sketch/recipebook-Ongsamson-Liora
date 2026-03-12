@@ -6,6 +6,7 @@
     <li>
         <a href="{{ recipe.get_absolute_url }}">{{ recipe }}</a>
     </li>
+    <a href="{% url 'ledger:recipe_create' %}">New Recipe</a>
 
 {% endfor %}
 {% endblock %}
