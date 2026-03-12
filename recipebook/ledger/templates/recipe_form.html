@@ -7,7 +7,8 @@
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form }}
-        <input type="submit" name="submit" value="Save Form">
+            <input type="submit" name="submit" value="Save Form">
+        </form>
     </body>
 </html>
 {% endblock %}
